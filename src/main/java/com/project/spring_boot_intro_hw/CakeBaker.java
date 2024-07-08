@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class CakeBaker {
 	
-	Frosting f;
-	Syrup s;
+	private Frosting f;
+	private Syrup s;
 	
-	
+	//constructor injection
 	public CakeBaker(Frosting f, Syrup s) {
 		super();
 		this.f = f;
@@ -18,8 +18,7 @@ public class CakeBaker {
 
 	public void bakeCake()
 	{
-		System.out.println("Cake baked with: "+ f.getFrostingType());
-		System.out.println("Cake baked with: "+ s.getSyrupType());
+		System.out.println("Cake baked with: "+ f.getFrostingType()+ " and "+s.getSyrupType());
 	}
 
 }
